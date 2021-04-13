@@ -8,7 +8,7 @@ namespace RaspberryPiDotNet
         {
             return new ConfigurationBuilder()
                 .SetBasePath(outputPath)
-                .AddJsonFile("appsettings.json", optional: true)
+                .AddJsonFile("appsetting.json", optional: true)
                 .Build();
         }
     }
