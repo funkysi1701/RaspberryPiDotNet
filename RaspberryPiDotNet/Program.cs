@@ -31,6 +31,7 @@ namespace RaspberryPiDotNet
 
             File.WriteAllBytes(targetPath, pictureBytes);
             CloudSave(filename, string.Empty, config.GetSection("LocalPath").Value, config.GetSection("Storage").Value, "Dev").GetAwaiter().GetResult();
+            File.Delete(targetPath);
         }
 
         public static async Task CloudSave(string FileName, string cloudPath, string sourcepath, string Storage, string Env)
